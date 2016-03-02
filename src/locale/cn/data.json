@@ -1,0 +1,14 @@
+{
+	"siteTitle" : "Chinese Title",
+	"pages"	: {
+		"landing" : {
+			"title": "Landing Page title - CN",
+			"body" : "Landing Body content - CN"
+		},
+		"about" : {
+			"title": "About Page title - CN",
+			"body" : "About Body content - CN"
+
+		}
+	}
+}

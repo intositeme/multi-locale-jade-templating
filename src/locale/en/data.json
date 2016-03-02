@@ -1,0 +1,14 @@
+{
+	"siteTitle" : "English Title",
+	"pages"	: {
+		"landing" : {
+			"title": "Landing Page title - EN",
+			"body" : "Landing Body content - EN"
+		},
+		"about" : {
+			"title": "About Page title - EN",
+			"body" : "About Body content - EN"
+
+		}
+	}
+}
