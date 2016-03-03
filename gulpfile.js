@@ -4,6 +4,7 @@
 var CONFIG = require('./site-config.json');
 
 var FOLDER = 'build/';
+var BIN = 'bin';
 var PROXY = 'http://localhost:3000';
 var SRC_FOLDER = './src/';
 var _ = require('lodash');
@@ -22,6 +23,7 @@ var path = require('path');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
 var newer = require('gulp-newer');
+var RevAll = require('gulp-rev-all');
 // HTML Plugins
 var jade = require('gulp-jade');
 // CSS Plugins
@@ -39,6 +41,10 @@ var uglify = require('gulp-uglify');
 var babelify = require('babelify')
 // Gulp Default
 gulp.task('default', ['rebuild'], function () {
+    var revAll = new RevAll({ dontRenameFile: [/^\/favicon.ico$/g, '.html'] });
+    gulp.src(FOLDER + '**')
+        .pipe(revAll.revision())
+        .pipe(gulp.dest(BIN));
 });
 
 // Setup Node Monitor server
